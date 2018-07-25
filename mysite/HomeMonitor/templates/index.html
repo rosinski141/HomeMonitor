@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <title>Smart Home Readings</title>
+    <link href="http://ethanmullan.co.uk/css/materialize.css" rel="stylesheet">
+    <link href="http://ethanmullan.co.uk/smarthome-p/css/main.css" rel="stylesheet">
+    <link href="http://ethanmullan.co.uk/smarthome-p/css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><i class="fas fa-home"></i>Smart Home</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#readings">Readings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="block">
+        <h3 class="center">Home Details</h3>
+        <br>
+        <div class="iframe-container">
+            <img class="hoverable" src="https://briffly.com/wp-content/uploads/Google-Maps.jpg">
+        </div>
+        <br>
+        <hr class="splitter">
+        <br>
+        <h5 class="center">Sensor Types</h5>
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <p>{{ temp_desc }}</p>
+                    </div>
+                    <div class="card-action">
+                        <p><i class="fas fa-thermometer-half fa-2x"></i> {{ temp_name }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <p>{{ temp_desc }}</p>
+                    </div>
+                    <div class="card-action">
+                        <p><i class="far fa-lightbulb fa-2x"></i> {{ temp_name }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <p>{{ temp_desc }}</p>
+                    </div>
+                    <div class="card-action">
+                        <p><i class="fas fa-tint fa-2x"></i> {{ temp_name }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="splitter">
+        <br>
+
+    </div>
+    <br>
+    <div class="block" id="readings">
+        <h2 class="center">Sensor Readings</h2>
+        <div class="iframe-container">
+            <img src="https://briffly.com/wp-content/uploads/Google-Maps.jpg">
+        </div>
+        <br>
+        <hr class="splitter">
+        <br>
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <center>
+                            <div class="temp-reading circle">
+                                <p id="tempID_reading">{{temp_reading}}</p>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card-action">
+                        <p>{{ temp_name }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <center>
+                            <div class="light-reading circle">
+                                <p id="lightID_reading">{{light_reading}}</p>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card-action">
+                        <p>{{ temp_name }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <center>
+                            <div class="humidity-reading circle">
+                                <p id="humID_reading">{{hum_reading}}</p>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card-action">
+                        <p>{{ temp_name }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- <h5 class="center">Sensors Working Normally</h5> -->
+        <hr class="splitter">
+        <br>
+    </div>
+    <br>
+    <div class="footer">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h4 class="center"><i class="fas fa-home"></i>Home Monitoring System</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="links col s12 m12 l3">
+                <p><i class="fas fa-info"></i> Useful Links</p>
+                <ul>
+                    <li><i class="fas fa-chevron-up"></i> <a href="">Back to top</a></li>
+                    <li><i class="fas fa-sync-alt"></i> <a href="">Refresh Page</a></li>
+                </ul>
+            </div>
+            <div class="desc col s12 m12 l5 offset-l4">
+                <p class="desc-title"><i class="fas fa-pencil-alt"></i> Description</p>
+                <p class="desc-text">This is a home monitoring system, developed using the Concert IOT platform. This system allows you to monitor the household environment via connected sensors.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script type="text/javascript" src="http://ethanmullan.co.uk/js/materialize.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+    </script>
+</body>
